@@ -26,8 +26,8 @@ export default function Login() {
   };
 
   return (
-    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200 p-6">
-      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
+    <div className="flex min-h-screen justify-center bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200 p-6">
+      <div className="w-full h-fit max-w-md bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg p-8">
         <h2 className="text-3xl font-extrabold text-gray-800 text-center mb-6">
           Welcome Back 👋
         </h2>
