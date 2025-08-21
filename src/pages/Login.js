@@ -26,22 +26,22 @@ export default function Login() {
   };
 
   return (
-    <div className="flex h-screen items-center justify-center bg-gradient-to-br from-blue-50 via-sky-100 to-cyan-100 p-4">
-      <div className="w-full max-w-md bg-white/80 backdrop-blur-lg rounded-2xl shadow-lg p-8">
-        <h2 className="text-3xl font-extrabold text-sky-800 text-center mb-3">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-br from-sky-100 via-blue-100 to-indigo-200 p-6">
+      <div className="w-full max-w-md bg-white rounded-2xl shadow-xl p-8 border border-blue-100">
+        <h2 className="text-3xl font-extrabold text-gray-800 text-center mb-6">
           Welcome Back 👋
         </h2>
-        <p className="text-sky-600 text-center mb-8">
+        <p className="text-gray-500 text-center mb-8">
           Login to manage your tasks efficiently
         </p>
 
         <form onSubmit={handleSubmit} className="space-y-5">
           <div>
-            <label className="block text-sm font-medium text-sky-700 mb-1">Email</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1">Email</label>
             <input
               type="email"
               placeholder="you@example.com"
-              className="w-full px-4 py-3 border border-sky-200 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition outline-none"
+              className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition outline-none bg-sky-50"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
@@ -49,11 +49,11 @@ export default function Login() {
           </div>
 
           <div className="relative">
-            <label className="block text-sm font-medium text-sky-700 mb-1">Password</label>
+            <label className="block text-sm font-medium text-gray-600 mb-1">Password</label>
             <input
               type={showPassword ? "text" : "password"}
               placeholder="••••••••"
-              className="w-full px-4 py-3 border border-sky-200 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition outline-none pr-24"
+              className="w-full px-4 py-3 border border-blue-200 rounded-lg focus:ring-2 focus:ring-sky-400 focus:border-sky-400 transition outline-none pr-10 bg-sky-50"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
               required
@@ -69,16 +69,16 @@ export default function Login() {
 
           <button
             type="submit"
-            className="w-full py-3 bg-sky-400 hover:bg-sky-500 text-white font-semibold rounded-lg shadow-md transition"
+            className="w-full py-3 bg-sky-500 hover:bg-sky-600 text-white font-semibold rounded-lg shadow-md transition"
             disabled={loading}
           >
             {loading ? "Login..." : "Login"}
           </button>
         </form>
 
-        <p className="text-sm text-sky-700 mt-6 text-center">
+        <p className="text-sm text-gray-600 mt-6 text-center">
           Don’t have an account?{" "}
-          <Link to="/register" className="text-sky-500 font-medium hover:underline">
+          <Link to="/register" className="text-sky-600 font-medium hover:underline">
             Register here
           </Link>
         </p>
